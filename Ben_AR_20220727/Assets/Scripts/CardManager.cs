@@ -14,6 +14,8 @@ namespace Ben
         [SerializeField, Header("µêÀÀ¸õÅD«ö¶s")] private VirtualButtonBehaviour vbbjump;
 
         private string shootaction = "Shoot";
+        private string ParJump = "Jump";
+        private string ParAttack = "Attack";
         private AudioSource audBGM;
 
         private void Awake()
@@ -29,7 +31,7 @@ namespace Ben
         private void OnJumpPressed(VirtualButtonBehaviour obj)
         {
             print("<color=#3366dd>¸õÅD!!!</color>");
-           
+            anirobot.SetTrigger(ParJump);
         }
 
         private void CardFound()
@@ -46,6 +48,7 @@ namespace Ben
         private void Attack()
         {
             print("<color=#987655>§ðÀ»!!!</color>");
+            anirobot.SetTrigger(ParAttack);
         }
     }
 }
